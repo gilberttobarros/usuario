@@ -1,11 +1,16 @@
 package com.gilberto.usuario.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 @Entity
 @Table(name = "usuario")
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Usuario {
 
         @Id
