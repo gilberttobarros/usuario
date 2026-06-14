@@ -19,13 +19,13 @@ public class Endereco {
     private String rua;
     @Column(name = "numero")
     private Long numero;
-    @Column(name = "complemento", length = 10)
+    @Column(name = "complemento", length = 100)
     private String complemento;
     @Column(name = "cidade", length = 150)
     private String cidade;
-    @Column(name = "estado", length = 2)
+    @Column(name = "estado", length = 3)
     private String estado;
-    @Column(name = "cep", length = 9)
+    @Column(name = "cep", length = 10)
     private String cep;
 
 }
