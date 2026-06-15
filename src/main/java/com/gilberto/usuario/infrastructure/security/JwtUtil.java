@@ -15,7 +15,7 @@ public class JwtUtil {
 
     // Chave secreta usada para assinar e verificar tokens JWT
     @Value("${jwt.secret}")
-    private String secretKey;
+    private String secretKey;   
 
     // Gera um token JWT com o nome de usuário e validade de 1 hora
     public String generateToken(String username) {
