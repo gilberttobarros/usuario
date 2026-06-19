@@ -2,6 +2,10 @@ package com.gilberto.usuario.infrastructure.security;
 
 import com.gilberto.usuario.entity.Usuario;
 import com.gilberto.usuario.repository.UsuarioRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

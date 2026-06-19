@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -13,9 +14,8 @@ import java.util.Date;
 public class JwtUtil {
 
     // Chave secreta usada para assinar e verificar tokens JWT
-    private final String secretKey = "sua-chave-secreta-super-segura-que-deve-ser-bem-longa";
-
-
+    @Value("${jwt.secret}")
+    private String secretKey;   
 
     // Gera um token JWT com o nome de usuário e validade de 1 hora
     public String generateToken(String username) {
